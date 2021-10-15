@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="themeOne">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <title>Calculator app</title>
+  
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="header__title">calc</h1>
+            <div class="header__theme-wrapper">
+                <p class="header__theme-title">THEME</p>
+                <div class="header__buttons">
+                    <span class="header__button-one">1</span>
+                    <span class="header__button-two">2</span>
+                    <span class="header__button-three">3</span>
+                    <div class="header__toggle-container">
+                        <span class="themeOne"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="screen">
+        <p class="screen__text"></p>
+        </div>
+
+        <div class="keyboard">
+        <button  onclick="insert('7')"> 7 </button>
+        <button  onclick="insert('8')"> 8 </button>
+        <button  onclick="insert('9')"> 9 </button>
+        <button  onclick="del()"> DEL </button>
+
+        <button  onclick="insert('4')"> 4 </button>
+        <button  onclick="insert('5')"> 5 </button>
+        <button  onclick="insert('6')"> 6 </button>
+        <button  onclick="insert('+')"> + </button>
+
+        <button  onclick="insert('1')"> 1 </button>
+        <button  onclick="insert('2')"> 2 </button>
+        <button  onclick="insert('3')"> 3 </button>
+        <button  onclick="insert('-')"> - </button>
+
+        <button  onclick="insert('.')"> . </button>
+        <button  onclick="insert('0')"> 0 </button>
+        <button  onclick="insert('/')"> / </button>
+        <button  onclick="insert('*')"> x </button>
+
+        <button onclick="reset()"> RESET </button>
+        <button onclick="calculate()"> = </button>
+        </div>
+    </div>
+
+    <script src="js/calc.js"></script>
+    <script src="js/theme.js"></script> 
+</body>
+</html>
