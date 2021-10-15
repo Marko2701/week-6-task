@@ -1,0 +1,251 @@
+.themeOne:root {
+    /* background */
+    --Very-dark-blue-main-background:hsl(222,26%,31%);
+    --Very-dark-keypad-background:hsl(223,31%,20%);
+    --Very-dark-blue-screen-background:hsl(224, 36%, 15%);
+  
+    /* keys */
+    --Desaturated-dark-blue-key-background:hsl(225,21%,49%);
+    --Desaturated-dark-blue-key-background-hover: #A2B2E1;
+    --Desaturated-dark-blue2-key-shadow:hsl(224,28%,35%);
+    --Red-key-background-toggle:hsl(6,63%,50%);
+    --Red-key-background-toggle-hover:#F96B5B;
+    --Dark-red-key-shadow:hsl(6,70%,34%);
+    --Light-grayish-orange-key-background:hsl(30,25%,89%);
+    --Light-grayish-orange-key-background-hover:#FFFFFE;
+    --Grayish-orange-key-shadow:hsl(28,16%,65%);
+  
+    /* text */
+    --Very-dark-grayish: hsl(221, 14%, 31%);
+    --White: #ffffff;
+    --TextTheme: #fff;
+    --TextTheme3: #fff;
+    --TextTheme2: hsl(221, 14%, 31%);
+}
+.themeTwo:root {
+    --Very-dark-blue-main-background:hsl(0, 0%, 90%);
+    --Very-dark-keypad-background:hsl(0, 5%, 81%);
+    --Very-dark-blue-screen-background:hsl(0, 0%, 93%);
+   
+    --Desaturated-dark-blue-key-background:hsl(185, 42%, 37%);
+    --Desaturated-dark-blue-key-background-hover:#62B5BC;
+    --Desaturated-dark-blue2-key-shadow:hsl(185, 58%, 25%);
+    --Red-key-background-toggle:hsl(25, 98%, 40%);
+    --Red-key-background-toggle-hover:#FF8A38;
+    --Dark-red-key-shadow:hsl(25, 99%, 27%);
+    --Light-grayish-orange-key-background:hsl(45, 7%, 89%);
+    --Light-grayish-orange-key-background-hover:#FFFFFF;
+    --Grayish-orange-key-shadow:hsl(35, 11%, 61%);
+     
+    --Very-dark-grayish: hsl(60, 10%, 19%);
+    --White: hsl(0, 0%, 100%);
+    --TextTheme: #35352c;
+    --TextTheme2: #35352c;
+    --TextTheme3: #fff;
+  
+}
+.themeThree:root {
+    --Very-dark-blue-main-background:hsl(268, 75%, 9%);
+    --Very-dark-keypad-background: hsl(268, 71%, 12%);
+    --Very-dark-blue-screen-background:hsl(268, 71%, 12%);
+   
+    --Desaturated-dark-blue-key-background:hsl(281, 89%, 26%);
+    --Desaturated-dark-blue-key-background-hover:#8631AF;
+    --Desaturated-dark-blue2-key-shadow:hsl(285, 91%, 52%);
+    --Red-key-background-toggle:hsl(176, 100%, 44%);
+    --Red-key-background-toggle-hover:#93FFF8;
+    --Dark-red-key-shadow:hsl(177, 92%, 70%);
+    --Light-grayish-orange-key-background:hsl(268, 47%, 21%);
+    --Light-grayish-orange-key-background-hover:#6C34AC;
+    --Grayish-orange-key-shadow:hsl(290, 70%, 36%);
+   
+    --Light-yellow: hsl(52, 100%, 62%);
+    --Very-dark-grayish: hsl(198, 20%, 13%);
+    --White: #ffffff;
+    --TextTheme: hsl(52, 100%, 62%);
+    --TextTheme2: hsl(52, 100%, 62%);
+    --TextTheme3: hsl(198, 20%, 13%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+body{
+    background-color: var(--Very-dark-blue-main-background);
+}
+.container{
+    width: 327px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.header{
+    width: 100%;
+    display: flex;
+}
+.header__title{
+    font-size: 32px;
+    letter-spacing: -0.53px;
+    flex: 1;
+    color: var(--TextTheme);
+}
+.header__theme-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-between;
+    text-align: center;
+    cursor: pointer;
+}
+.header__theme-title{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 13.44px;
+    letter-spacing: 1px;
+    margin-right: 21px;
+    padding-bottom: 5px;
+    align-self: flex-end;
+    color: var(--TextTheme);
+}
+.header__buttons{
+    display: grid;
+}
+.header__button-one,
+.header__button-two,
+.header__button-three{
+    color: var(--TextTheme);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 13.44px;
+    padding-bottom: 5px;
+}
+.header__toggle-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 26px;
+    background: var(--Very-dark-keypad-background);
+    border-radius: 13px;
+    position: relative;
+    grid-column: span 3;
+}
+.header__toggle-container span{
+    width: 16px;
+    height: 16px;
+    background:var(--Red-key-background-toggle);
+    border-radius: 50%;
+    transition: .3s ease;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 20%;
+    top: 50%;
+    cursor: pointer;
+}
+.header__toggle-container span:hover{
+    background-color: var(--Red-key-background-toggle-hover);
+}
+.header__toggle-container .themeTwo{
+    left: 50%;
+}
+.header__toggle-container .themeThree{
+    left: 80%;
+}
+.screen{
+    width: 100%;
+    height: 88px;
+    background: var(--Very-dark-blue-screen-background);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 35.84px;
+    letter-spacing: -0.53px;
+    border-radius: 12px;
+    text-align: right;
+    color: var(--TextTheme);
+    margin-top: 32px;
+    margin-bottom: 24px;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+.screen__text{
+    padding: 26px 26px 24px 0;
+}
+.keyboard{
+    background: var(--Very-dark-keypad-background);
+    padding: 24px;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 13px;
+}
+.keyboard button{
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 31.36px;
+    letter-spacing: -0.47px;
+    font-family: 'Spartan', sans-serif;
+    border: 0;
+    cursor: pointer;
+    background: var(--Light-grayish-orange-key-background);
+    color: var(--TextTheme2);
+    border-radius: 3px;
+    box-shadow: 0 4px var(--Grayish-orange-key-shadow);
+}
+.keyboard button:hover{
+    background: var(--Light-grayish-orange-key-background-hover);
+}
+.keyboard button:nth-of-type(4),
+.keyboard button:nth-of-type(17){
+    background: var(--Desaturated-dark-blue-key-background);
+    color: var(--White);
+    box-shadow: 0 4px var(--Desaturated-dark-blue2-key-shadow);
+    font-size: 16px;
+}
+.keyboard button:nth-of-type(4):hover,
+.keyboard button:nth-of-type(17):hover{
+    background: var(--Desaturated-dark-blue-key-background-hover);
+}
+.keyboard button:nth-of-type(17){
+    width: auto;
+    font-size: 16px;
+    font-weight: 700;
+    grid-column: span 2;
+}
+.keyboard button:nth-of-type(18){
+    width: auto;
+    background: var(--Red-key-background-toggle);
+    color: var(--TextTheme3);
+    box-shadow: 0 4px var(--Dark-red-key-shadow);
+    grid-column: span 2;
+}
+.keyboard button:nth-of-type(18):hover{
+    background: var(--Red-key-background-toggle-hover);
+}
+
+
+@media all and (min-width: 1440px){
+    .container {
+        width: 540px;
+    }
+    .screen {
+        height: 128px;
+        font-size: 48px;
+        line-height: 53.76px;
+        letter-spacing: -0.8px;
+    }
+    .screen__text {
+        padding: 36px 32px 38px 0;
+    }
+    .keyboard {
+        padding: 30px;
+        gap: 24px;
+}
+    .keyboard button {
+        width: 101px;
+    }
+}
